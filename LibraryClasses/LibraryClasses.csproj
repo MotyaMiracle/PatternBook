@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE5A6B09-00D4-4F7F-8344-299FD5328D05}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>PatternBook</RootNamespace>
-    <AssemblyName>PatternBook</AssemblyName>
+    <ProjectGuid>{F3DB9F0D-944D-4F8C-B5D1-2615A071579D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibraryClasses</RootNamespace>
+    <AssemblyName>LibraryClasses</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="BulgerianPizza.cs" />
+    <Compile Include="CheesePizza.cs" />
+    <Compile Include="ItalianPizza.cs" />
+    <Compile Include="Pizza.cs" />
+    <Compile Include="PizzaDecorator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibraryClasses\LibraryClasses.csproj">
-      <Project>{f3db9f0d-944d-4f8c-b5d1-2615a071579d}</Project>
-      <Name>LibraryClasses</Name>
-    </ProjectReference>
+    <Compile Include="TomatoPizza.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
