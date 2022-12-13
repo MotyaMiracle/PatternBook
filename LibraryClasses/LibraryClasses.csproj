@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE5A6B09-00D4-4F7F-8344-299FD5328D05}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>PatternBook</RootNamespace>
-    <AssemblyName>PatternBook</AssemblyName>
+    <ProjectGuid>{55FDA0E1-6AFA-420E-994D-509F677AA960}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibraryClasses</RootNamespace>
+    <AssemblyName>LibraryClasses</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Arbalet.cs" />
+    <Compile Include="ElfFactory.cs" />
+    <Compile Include="FlyMovement.cs" />
+    <Compile Include="Hero.cs" />
+    <Compile Include="HeroFactory.cs" />
+    <Compile Include="Movement.cs" />
+    <Compile Include="RunMovement.cs" />
+    <Compile Include="Sword.cs" />
+    <Compile Include="WarriorFactory.cs" />
+    <Compile Include="Weapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibraryClasses\LibraryClasses.csproj">
-      <Project>{55fda0e1-6afa-420e-994d-509f677aa960}</Project>
-      <Name>LibraryClasses</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
